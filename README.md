@@ -9,12 +9,8 @@ Repository URL: https://github.com/anniemcfarland7/Note-Taker
 
 Heroku URL: https://note-taker-annie.herokuapp.com/notes
 
-## Walkthrough Video
-
-The following video demonstrates the application's functionality:
-
-![Walkthrough Video](./assets/video.gif)
+## Preview
 
 The following image demonstrates the final appearance of the sample Note Taker application:
 
-![Screenshot](./assets/screenshot.png)
+![Screenshot](.public/assets/screenshot.png)
