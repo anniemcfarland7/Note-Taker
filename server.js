@@ -28,7 +28,6 @@ app.post("/api/notes", (req, res) => {
   savedNotes.push(newNote);
 
   fs.writeFileSync("./db/db.json", JSON.stringify(savedNotes));
-  console.log("Note saved to db.json. Content: ", newNote);
   res.json(savedNotes);
 })
 
@@ -36,14 +35,13 @@ app.delete("/api/notes/:id", (req, res) => {
   let noteID = req.params.id;
   let newID = 0;
   let notes = JSON.parse(fs.readFileSync("./db/db.json", "utf8"))
-  console.log(`Deleting note with ID ${noteID}`);
   notes = notes.filter(currentNote => {
-      return currentNote.id != noteID;
+    return currentNote.id != noteID;
   })
-  
+
   for (currentNote of notes) {
-      currentNote.id = newID.toString();
-      newID++;
+    currentNote.id = newID.toString();
+    newID++;
   }
 
   fs.writeFileSync("./db/db.json", JSON.stringify(notes));
@@ -51,6 +49,5 @@ app.delete("/api/notes/:id", (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`Server listening on: http://localhost:${PORT}`);
-  });
-  
+  console.log(`Server listening on: http://localhost:${PORT}`);
+});
