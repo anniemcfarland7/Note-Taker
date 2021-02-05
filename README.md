@@ -13,4 +13,4 @@ Heroku URL: https://note-taker-annie.herokuapp.com/notes
 
 The following image demonstrates the final appearance of the sample Note Taker application:
 
-![Screenshot](.public/assets/screenshot.png)
+![Screenshot](./public/assets/screenshot.png)
